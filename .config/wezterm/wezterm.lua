@@ -11,7 +11,7 @@ end
 config.window_background_opacity = 0.80
 
 -- Fullscreen in MacBook
-if is_mac then
+if is_mac() then
   local mux = wezterm.mux
   wezterm.on('gui-startup', function(cmd)
     local tab, pane, window = mux.spawn_window(cmd or {})
@@ -20,7 +20,7 @@ if is_mac then
 end
 
 -- Change the default domain into WSL in Windows
-if is_windows then
+if is_windows() then
   config.default_domain = 'WSL:Ubuntu-24.04'
 end
 
@@ -29,9 +29,7 @@ config.font = wezterm.font_with_fallback {
   'Noto Sans JP',
 }
 config.color_scheme = 'iceberg-dark'
+config.window_decorations = 'RESIZE'
 
-if is_mac then
-  config.window_decorations = 'RESIZE'
-end
 
 return config
