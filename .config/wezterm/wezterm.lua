@@ -21,7 +21,7 @@ end
 
 -- Change the default domain into WSL in Windows
 if is_windows then
-  config.defualt_domain = 'WSL:Ubuntu-24.04'
+  config.default_domain = 'WSL:Ubuntu-24.04'
 end
 
 config.font = wezterm.font_with_fallback {
