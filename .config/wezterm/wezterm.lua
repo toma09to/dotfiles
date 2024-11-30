@@ -30,7 +30,7 @@ config.font = wezterm.font_with_fallback {
 }
 config.color_scheme = 'iceberg-dark'
 
-if not is_windows then
+if is_mac then
   config.window_decorations = 'RESIZE'
 end
 
