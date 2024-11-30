@@ -2,10 +2,10 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 local is_windows = function()
-  return wezterm.target_triple:find('windows') ~= nil
+  return wezterm.target_triple == 'x86_64-pc-windows-msvc'
 end
 local is_mac = function()
-  return wezterm.target_triple:find('apple') ~= nil
+  return wezterm.target_triple == 'aarch64-apple-darwin'
 end
 
 config.window_background_opacity = 0.80
@@ -29,14 +29,9 @@ config.font = wezterm.font_with_fallback {
   'Noto Sans JP',
 }
 config.color_scheme = 'iceberg-dark'
--- config.window_background_image = '/Users/toma09to/Downloads/GOO7JpfbIAEoZPl.jpeg'
--- config.window_background_image_hsb = {
-  -- brightness = 0.05,
--- }
 
 if not is_windows then
   config.window_decorations = 'RESIZE'
 end
-config.disable_default_mouse_bindings = true
 
 return config
