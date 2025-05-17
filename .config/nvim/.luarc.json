@@ -1,5 +1,0 @@
-{
-  "workspace.library": ["$VIMRUNTIME/lua"],
-  "runtime.version": "LuaJIT",
-  "hint.enable": true
-}

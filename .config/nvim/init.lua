@@ -1,5 +1,0 @@
-require('core')
-require('options')
-require('keymaps')
-require('colorscheme')
-require('config.lazy')
