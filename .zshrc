@@ -44,3 +44,4 @@ zstyle ':completion:*:*kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
 alias ls="ls --color=auto"
 alias rmrm="rm -rf"
 alias vim="nvim"
+alias mkdate="mkdir `date +%Y-%m-%d`"
