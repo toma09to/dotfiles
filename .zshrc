@@ -20,6 +20,7 @@ zinit light romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# PATH to ~/.local/bin/
 if [ -d "$HOME/.local/bin" ]; then
     export PATH="$PATH:$HOME/.local/bin"
 fi
@@ -48,4 +49,7 @@ zstyle ':completion:*:*kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
 alias ls="ls --color=auto"
 alias rmrm="rm -rf"
 alias vim="nvim"
-alias mkdate="mkdir `date +%Y-%m-%d`"
+
+function mkdate() {
+    mkdir `date +%Y-%m-%d`
+}
