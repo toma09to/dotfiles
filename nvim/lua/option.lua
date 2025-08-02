@@ -18,3 +18,6 @@ local options = {
 for k,v in pairs(options) do
     vim.opt[k] = v
 end
+
+-- Use the system clipboard
+vim.opt.clipboard:append({'unnamedplus'})
